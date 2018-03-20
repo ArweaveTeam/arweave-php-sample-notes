@@ -1,0 +1,20 @@
+{
+    "name": "arweave-team/sample-php-application",
+    "description": "Arweave Sample PHP application",
+    "authors": [
+        {
+            "name": "Kyle Beckles",
+            "email": "kyle@arweave.org"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://bitbucket.org/arweave-kyle/arweave-php"
+        }
+    ],
+    "require": {
+        "kyle/arweave-sdk": "dev-master"
+    },
+    "minimum-stability": "dev"
+}
