@@ -1,4 +1,5 @@
 <?php
+chdir(__DIR__);
 
 require __DIR__ . '/vendor/autoload.php';
 
@@ -59,7 +60,15 @@ function getWallet(): Wallet
  */
 function listNotes(): array
 {
-    return json_decode(file_get_contents(__DIR__ . '/storage/notes.json'), true);
+    $notes_path = __DIR__ . '/storage/notes.json';
+
+    if (!file_exists($notes_path)) {
+        if (!@file_put_contents($notes_path, json_encode([]))) {
+            throw new Exception('Could not read/create notes file: ' . $notes_path);
+        }
+    }
+
+    return json_decode(file_get_contents($notes_path), true);
 }
 
 /**

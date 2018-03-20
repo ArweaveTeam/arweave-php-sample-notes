@@ -22,7 +22,7 @@
             <div class="controls warning success <?php echo @$_GET['posted'] ? 'visible' : ''; ?>">
                 <div class="left">
                     <div class="message">
-                        Note saved! It may take a few minutes to be comitted to the Arweave network.
+                        Note saved! It may take a few minutes to become available on the Arweave.
                     </div>
                 </div>
                 <div class="right">

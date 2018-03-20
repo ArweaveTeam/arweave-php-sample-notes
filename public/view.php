@@ -13,7 +13,7 @@ try {
     $note = getNote($_GET['id']);
 } catch (Exception $e) {
     $note  = [];
-    $error = 'Error getting note. New notes may take a few minutes to propagate.';
+    $error = 'Error getting data. New notes may take a few minutes to become available.';
 }
 
 ?>
@@ -72,14 +72,8 @@ try {
 
             <?php else: ?>
                 <div class="view note">
-                    <div class="subject">
-                        Note not found
-                    </div>
-                    <p class="body">
-                        This note
-                    </p>
-                    <div class="meta">
-                        <?php echo $note['date']; ?>
+                    <div class="body">
+                        Note not found.
                     </div>
                 </div>
             <?php endif;?>
