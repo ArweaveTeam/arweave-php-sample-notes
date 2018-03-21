@@ -10,6 +10,8 @@ VHOST=$(cat <<EOF
   <Directory "/var/www/html/app/public">
     AllowOverride All
   </Directory>
+  ErrorLog /var/www/html/app/logs/apache-error.log
+  CustomLog /var/www/html/app/logs/apache-access.log combined
 </VirtualHost>
 EOF
 )

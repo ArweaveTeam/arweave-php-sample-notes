@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="controls warning confirm">
                 <div class="left">
                     <div class="message">
-                        Are you sure? Remember, all notes are public and permenant.
+                        Are you sure? Remember, all notes are public and permanent.
                     </div>
                 </div>
                 <div class="right">
