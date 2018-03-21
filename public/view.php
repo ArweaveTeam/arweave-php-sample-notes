@@ -3,17 +3,19 @@
 
 <?php
 
-if (!@$_GET['id']) {
-    // Redirect to notes list page if no id is provided
-    header('Location: notes');
-    exit();
-}
+$error = null;
 
-try {
-    $note = getNote($_GET['id']);
-} catch (Exception $e) {
-    $note  = [];
-    $error = 'Error getting data. New notes may take a few minutes to become available.';
+if (@$_GET['id']) {
+
+    try {
+        $note = getNote($_GET['id']);
+    } catch (\Arweave\SDK\Exceptions\TransactionNotFoundException $e) {
+        $note  = [];
+        $error = 'Error getting data. New notes may take a few minutes to become available.';
+    }
+
+} else {
+    $note = [];
 }
 
 ?>

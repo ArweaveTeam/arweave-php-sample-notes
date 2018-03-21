@@ -72,13 +72,19 @@ function listNotes(): array
 }
 
 /**
- * Get a note from the Arweave network
+ * Get a note from the Arweave network.
+ *
+ * [
+ *     'date' => '...',
+ *     'subject' => '...',
+ *     'body' => '...',
+ * ]
  *
  * @param  string $note_id
  *
- * @return string[]
+ * @return string[]|null
  */
-function getNote(string $note_id): array
+function getNote(string $note_id)
 {
     return json_decode(getArweave()->getData($note_id, true), true);
 }

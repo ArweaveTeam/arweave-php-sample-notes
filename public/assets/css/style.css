@@ -121,6 +121,35 @@ a{
     border-left: 1px solid #EEEEEE;
 }
 
+.header-navigation .controls .search{
+    position: absolute;
+    left: 5px;
+    right: 180px;
+    font-size: 16px;
+    padding: 0 0 0 10px;
+    top: -200%;
+    opacity: 0;
+    z-index: -1;
+    transition:
+        opacity .25s ease-in-out,
+        top .25s ease-in-out,
+        z-index .25s ease-in-out;
+}
+
+.header-navigation .controls .search input{
+    border: none;
+    border-bottom: 1px solid #EEEEEE;
+    padding: 8px 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.header-navigation .controls .search.visible{
+    top: 5px;
+    opacity: 1;
+    z-index: 1;
+}
+
 .header-navigation:after{
     clear: both;
     content: ' ';

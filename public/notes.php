@@ -9,8 +9,14 @@
                     <div class="message">
                         <?php echo count(listNotes()); ?> Notes
                     </div>
+                    <div class="search">
+                        <input type="text" placeholder="Enter note ID then hit enter">
+                    </div>
                 </div>
                 <div class="right">
+                    <a class="button" id="button-search-toggle">
+                        <i class="fas fa-search"></i>
+                    </a>
                     <a href="new" class="button">
                         <i class="fas fa-plus"></i>
                     </a>
@@ -59,6 +65,16 @@
 <script>
     $('#button-success-dismiss').click(function(){
         $('.warning.success').removeClass('visible');
+    });
+    $('.search input').on('keypress', function(event){
+        if (event.which === 13) {
+            window.location.href = 'view?id=' + $(this).val();
+        }
+    });
+
+    $('#button-search-toggle').click(function(){
+        $('.search').toggleClass('visible');
+        $('.search input').val('');
     });
 </script>
 
