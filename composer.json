@@ -1,20 +1,14 @@
 {
     "name": "arweave-team/sample-php-application",
-    "description": "Arweave Sample PHP application",
+    "description": "Arweave notes - a PHP sample application that stores and retrieves notes on the Arweave.",
     "authors": [
         {
             "name": "Kyle Beckles",
             "email": "kyle@arweave.org"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://bitbucket.org/arweave-kyle/arweave-php"
-        }
-    ],
     "require": {
-        "kyle/arweave-sdk": "dev-master"
+        "arweave/arweave-sdk": "dev-master"
     },
     "minimum-stability": "dev"
 }
